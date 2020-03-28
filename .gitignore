@@ -1,9 +1,13 @@
 .vscode
-
+__pycache__
+*/__pycache__
 *.txt
+*.exe
 
 */*.txt
 */*.exe
 */*.exe
+test.py
+*/test.py
 problem.cpp
 */temp.cpp

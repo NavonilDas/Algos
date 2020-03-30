@@ -33,3 +33,9 @@
 12. [Block](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/practice-problems/algorithm/blocks-2/) & [Solution](Hackerearth/Block.cpp)
 
 13. [Zeroes And Ones](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/practice-problems/algorithm/k-th-bit-faae0e0d/) & [Solution](Hackerearth/ZeroesAndOnes.cpp)
+
+14. [Distinct Integer In Range](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/practice-problems/algorithm/distinct-integers-in-range-66eca44b/) & [Solution](Hackerearth/DistinctIntegerInRange.cpp)
+
+15. [Bob And Array Queries](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/practice-problems/algorithm/shivam-and-expensive-birthday-gift-da58b2f0/) & [Solution](Hackerearth/BobAndArrayQueries.cpp)
+
+16. [Special Bit Numbers](https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/chakra-numbers-9c9e0faf/) & [Solution](Hackerearth/SpecialBitNumbers.cpp)

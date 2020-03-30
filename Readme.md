@@ -6,6 +6,10 @@
 
 2. [Miller Rabin Primalty Test](Maths/Primetest.cpp)
 
+## Bit Manipulation
+
+1. [Total Set Bits Upto n](Bits/TotalBitsUptoN.cpp)
+
 ## Problems
 
 1. [Move Zeroes to End](https://codezen.codingninjas.com/practice/240143/5577/interview-shuriken-41:-move-zeroes-to-end) & [Solution](CodeZen/MoveZeroToEnd.cpp)
@@ -39,3 +43,9 @@
 15. [Bob And Array Queries](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/practice-problems/algorithm/shivam-and-expensive-birthday-gift-da58b2f0/) & [Solution](Hackerearth/BobAndArrayQueries.cpp)
 
 16. [Special Bit Numbers](https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/chakra-numbers-9c9e0faf/) & [Solution](Hackerearth/SpecialBitNumbers.cpp)
+
+17. TechGig Code Gladiators 2020 Problem 1 & [Solution](Techgig/Glad20201.cpp)
+
+18. TechGig Code Gladiators 2020 Problem 2 & [Solution](Techgig/Glad2020.2.cpp)
+
+19. [Missing Numbers](https://codezen.codingninjas.com/practice/388904/6433/interview-shuriken-55:-missing-numbers) & [Solution](CodeZen/MissingNumbers.cpp)

@@ -14,16 +14,26 @@
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
-// #include <boost/multiprecision/cpp_int.hpp>
-// using boost::multiprecision::cpp_int;
+
 using namespace std;
 int main()
 {
     FASTIO;
 #ifdef NAVONIL
     freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
 #endif
-
+    int z = 0, o = 0;
+    char x;
+    do
+    {
+        x = getchar();
+        if(x == 0 || x == '\n' || x == -1) break;
+        if(x == 'Z' || x == 'z') ++z;
+        if(x == 'O' || x == 'o') ++o;
+    } while (true);
+    if(z*2 == o)
+        cout<<"Yes\n";
+    else
+        cout<<"No\n";
     return 0;
 }

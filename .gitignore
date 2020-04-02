@@ -8,6 +8,9 @@ __pycache__
 */*.exe
 */*.exe
 test.py
-*/test.py
+*/test*.py
+test*.py
+*/test*.cpp
+test*.cpp
 problem.cpp
 */temp.cpp

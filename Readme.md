@@ -49,3 +49,29 @@
 18. TechGig Code Gladiators 2020 Problem 2 & [Solution](Techgig/Glad2020.2.cpp)
 
 19. [Missing Numbers](https://codezen.codingninjas.com/practice/388904/6433/interview-shuriken-55:-missing-numbers) & [Solution](CodeZen/MissingNumbers.cpp)
+
+20. [Seating Arrangement](https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/seating-arrangement-1/) & [Solution](Hackerearth/Basics/SeatingArrangement.cpp)
+
+21. [Zoos](https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/is-zoo-f6f309e7/) & [Solution](Hackerearth/Basics/Zoos.cpp)
+
+22. [Anagrams](https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/anagrams-651/) & [Solution](Hackerearth/Basics/Anagrams.cpp)
+
+23. [Palindromic String](https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/palindrome-check-2/) & [Solution](Hackerearth/Basics/PalindromicString.cpp)
+
+24. [Find Product](https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/find-product/) & [Solution](Hackerearth/Basics/FindProduct.cpp)
+
+25. [Cost Of Ballons](https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/mojtaba-prepares-contest-29b2a044/) & [Solution](Hackerearth/Basics/CostOfBallons.cpp)
+
+26. [Count Divisor](https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/count-divisors/) & [Solution](Hackerearth/Basics/CountDivisor.cpp)
+
+27. [Win-the-Game](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/win-the-game/) & [Solution](Hackerearth/Algorithm/Win-the-Game.cpp)
+
+28. [Wacky Workouts](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/angry-neighbours/) & [Solution](Hackerearth/Algorithm/WackyWorkouts.cpp)
+
+29. [Intelligent Girl](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/intelligent-girl-1/) & [Solution](Hackerearth/Algorithm/IntelligentGirl.cpp)
+
+30. [Xsquare And Two Arrays](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/xsquare-and-two-arrays/) & [Solution](Hackerearth/Algorithm/XsquareAndTwoArrays.cpp)
+
+31. [ULTIMATE STAIRWAY TO HEAVEN](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/ultimate-stairway-to-heaven/) & [Solution](Hackerearth/Algorithm/ULTIMATESTAIRWAYTOHEAVEN.cpp)
+
+32. [Prateek and theories](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/prateek-and-theories-3/) & [Solution](Hackerearth/Algorithm/Prateekandtheories.cpp)

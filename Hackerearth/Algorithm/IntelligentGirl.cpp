@@ -24,6 +24,15 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
+    string a;
+    cin>>a;
+    int ans[10001] = {0};
+    for(int i=a.size()-1;~i;--i){
+        ans[i] += ans[i+1] + !(a[i]&1);
+    }
 
+    for(int i=0;i<a.size();++i){
+        cout<<ans[i]<<" ";
+    }
     return 0;
 }

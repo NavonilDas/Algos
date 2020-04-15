@@ -37,8 +37,6 @@ using namespace std;
 #define dloop(i, n) for (int i = n, ~i; --i)
 #define debug(x1) cout << #x1 << ": " << x1 << endl;
 #define all(v) (v).begin(), (v).end()
-#define sz(v) ((int)(v.size()))
-
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
 
@@ -48,7 +46,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 //     ull res = 1;
 //     a = a%m;
 //     while(p > 0){
-//         if(p&1)
+//         if(res&1)
 //             res = (res*a)%m;
 //         a = (a*a)%m;
 //         p >>=1;
@@ -61,13 +59,28 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // fill,copy,lower_bound,upper_bound,max_element,min_element
 int main()
 {
-    // clock_t tStart = clock();
     FASTIO;
 #ifdef NAVONIL
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
 #endif
-
-    // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+    loop(i,2){
+        loop(j,2){
+            loop(k,2){
+                cout<<"(("<<i<<"&"<<j<<")&"<<k<<") = "<<((i&j)&k)<<endl;
+            }
+        }
+    }    
+    // stringstream a;
+    // string x = "";
+    // a.str("");
+    // from(i, 1, 99)
+    // {
+    //     a << i;
+    // }
+    // x = a.str();
+    // cout<<x.size()<<endl;
+    // cout<<x<<endl;
+    // cout<<x[10]<<endl;
     return 0;
 }

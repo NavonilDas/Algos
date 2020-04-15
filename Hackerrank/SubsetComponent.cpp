@@ -67,7 +67,57 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
+    ll ar[30];
+    int n;
+    cin >> n;
+    loop(i, n)
+    {
+        cin >> ar[i];
+    }
+    int pos = (1 << n) - 1;
+    ll sum = 64;
+    map<ll, ll> comp;
+    from(i, 1, pos)
+    {
+        ll cur = 64;
+        ll fuck = 0;
+        loop(j, n)
+        {
+            if ((i >> j) & 1)
+            {
+                fuck = fuck | ar[j];
+            //     int kc = setbits(ar[j]);
+            //     fuck += kc;
+            //     // cout << ar[j] << " ";
+            //     continue;
 
-    // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+            //     if (comp.find(ar[j]) != comp.end())
+            //     {
+            //         cur -= comp[ar[j]];
+            //     }
+            //     else
+            //     {
+            //         int c = setbits(ar[j]);
+            //         // cout<<c<<endl;
+            //         if (c == 1)
+            //         {
+            //             comp[ar[j]] = 0;
+            //             continue;
+            //         }
+            //         else
+            //         {
+            //             int tmp = (c * (c - 1)) >> 1;
+            //             comp[ar[j]] = tmp;
+            //             cur -= tmp;
+            //         }
+            //     }
+            }
+        }
+        cout<<setbits(fuck)<<endl;
+        // cout<<fuck<<endl;
+        // if(cur > 0)
+        sum += (64 - setbits(fuck));
+    }
+    cout << sum << endl;
     return 0;
 }

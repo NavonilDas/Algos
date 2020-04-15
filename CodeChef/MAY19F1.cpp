@@ -67,7 +67,25 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-
+    int n, q, t;
+    till(tx)
+    {
+        cin >> n >> q;
+        vi mx(n);
+        loop(i, n)
+        {
+            cin >> t;
+            if (i == 0)
+                mx[i] = t;
+            else
+                mx[i] = max(mx[i - 1], t);
+        }
+        while (q--)
+        {
+            cin >> t;
+            cout << mx[t - 1] << endl;
+        }
+    }
     // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     return 0;
 }

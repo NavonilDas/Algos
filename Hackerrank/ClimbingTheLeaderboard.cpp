@@ -59,6 +59,22 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // #pragma GCC target("avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
 // fill,copy,lower_bound,upper_bound,max_element,min_element
+int bsearch(vi &ar, int &val)
+{
+    int l = 0, r = sz(ar) - 1, mid;
+    while (l <= r)
+    {
+        mid = (l + r) >> 1;
+        if (ar[mid] == val)
+            return mid;
+
+        if (ar[mid] < val)
+            r = mid - 1;
+        else
+            l = mid + 1;
+    }
+    return l;
+}
 int main()
 {
     // clock_t tStart = clock();
@@ -67,7 +83,50 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
+    int n, k;
+    cin >> n;
+    vi ar(n);
+    loop(i, n)
+    {
+        cin >> ar[i];
+    }
+    cin >> k;
+    vi pos(k);
 
+    loop(i, k)
+    {
+        cin >> pos[i];
+    }
+    vi rank(n);
+    sort(all(ar), greater<int>());
+    rank[0] = 1;
+    for (int i = 1; i < n; ++i)
+    {
+        if (ar[i] == ar[i - 1])
+            rank[i] = rank[i - 1];
+        else
+            rank[i] = 1 + rank[i - 1];
+    }
+    // cout << rank[5] << endl;
+    loop(i, k)
+    {
+        int z = bsearch(ar, pos[i]);
+        if (z == n)
+        {
+            cout << (rank[n - 1] + 1) << endl;
+            continue;
+        }
+        if (ar[z] == pos[i])
+            cout << rank[z] << endl;
+        else if (ar[z] > pos[i])
+            cout << (rank[z] + 1) << endl;
+        else
+            cout << rank[z]<< endl;
+        // cout << pos[i] << " " << z << endl;
+
+        // auto z = upper_bound(all(ar), pos[i]);
+        // cout <<pos[i]<<" "<< (z - ar.begin())<<endl;
+    }
     // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     return 0;
 }

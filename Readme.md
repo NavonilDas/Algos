@@ -75,3 +75,11 @@
 31. [ULTIMATE STAIRWAY TO HEAVEN](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/ultimate-stairway-to-heaven/) & [Solution](Hackerearth/Algorithm/ULTIMATESTAIRWAYTOHEAVEN.cpp)
 
 32. [Prateek and theories](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/prateek-and-theories-3/) & [Solution](Hackerearth/Algorithm/Prateekandtheories.cpp)
+
+33. [MI vs CSK and Pearls](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/the-philosophers-pearl/) & [Solution](Hackerearth/Algorithm/MIvsCSKandPearls.cpp)
+
+34. [Coin Toss](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/coin-toss/) & [Solution](Hackerearth/Algorithm/CoinToss.cpp)
+
+35. [Strange Number](https://www.codechef.com/APRIL20B/problems/STRNO) & [Solution](CodeChef/April_Long_2020_div2/StrangeNumber.cpp)
+
+36. [Intersection of Intervals](https://codezen.codingninjas.com/practice/289309/6155/interview-shuriken-50:-intersection-of-intervals) & [Solution](CodeZen/IntersectionofIntervals.cpp)

@@ -67,7 +67,22 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-
+    int n, k, t, p = 0;
+    cin >> n >> k;
+    map<int, bool> hsh;
+    loop(i, n)
+    {
+        cin >> t;
+        if (hsh.find(t + k) != hsh.end())
+        {
+            // cout << t << " " << (t + k) << " " << (t - k) << endl;
+            ++p;
+        }
+        if(hsh.find(t - k) != hsh.end())
+            ++p;
+        hsh[t] = true;
+    }
+    cout << p << endl;
     // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     return 0;
 }

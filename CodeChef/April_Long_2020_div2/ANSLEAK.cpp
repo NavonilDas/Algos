@@ -37,8 +37,6 @@ using namespace std;
 #define dloop(i, n) for (int i = n, ~i; --i)
 #define debug(x1) cout << #x1 << ": " << x1 << endl;
 #define all(v) (v).begin(), (v).end()
-#define sz(v) ((int)(v.size()))
-
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
 
@@ -48,7 +46,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 //     ull res = 1;
 //     a = a%m;
 //     while(p > 0){
-//         if(p&1)
+//         if(res&1)
 //             res = (res*a)%m;
 //         a = (a*a)%m;
 //         p >>=1;
@@ -61,13 +59,25 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // fill,copy,lower_bound,upper_bound,max_element,min_element
 int main()
 {
-    // clock_t tStart = clock();
     FASTIO;
 #ifdef NAVONIL
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-
-    // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+    int n,m,k,tmp;
+    ull x = 1e18;
+    cout<<log2(x)<<endl;
+    till(t){
+        cin>>n>>m>>k;
+        loop(i,n){
+            int ans[10] = {0};
+            loop(j,k){
+                // Cij
+                cin>>tmp;
+                ++ans[tmp];
+            }
+            cout<<(max_element(ans,ans + 10) - ans)<<endl;
+        }
+    }
     return 0;
 }

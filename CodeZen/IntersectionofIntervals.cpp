@@ -37,8 +37,6 @@ using namespace std;
 #define dloop(i, n) for (int i = n, ~i; --i)
 #define debug(x1) cout << #x1 << ": " << x1 << endl;
 #define all(v) (v).begin(), (v).end()
-#define sz(v) ((int)(v.size()))
-
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
 
@@ -48,7 +46,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 //     ull res = 1;
 //     a = a%m;
 //     while(p > 0){
-//         if(p&1)
+//         if(res&1)
 //             res = (res*a)%m;
 //         a = (a*a)%m;
 //         p >>=1;
@@ -59,15 +57,51 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // #pragma GCC target("avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
 // fill,copy,lower_bound,upper_bound,max_element,min_element
+bool cust(vi &a, vi &b)
+{
+    return a[0] < b[0];
+}
 int main()
 {
-    // clock_t tStart = clock();
     FASTIO;
 #ifdef NAVONIL
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
+    int a, b, tx, ty;
+    cin >> a;
+    mat(int) p(a);
+    loop(i, a)
+    {
+        p[i] = vector<int>(2);
+        cin >> p[i][0] >> p[i][1];
+    }
+    cin >> b;
+    loop(i, b)
+    {
+        cin >> tx >> ty;
+        p.pb({tx, ty});
+    }
+    sort(all(p), cust);
+    for (auto &x : p)
+        cout << x[0] << " " << x[1] << endl;
+    int n = p.size() - 1, j = 0;
+    from(i, 1, n)
+    {
+        auto &y = p.at(i);
+        auto &x = p.at(j);
+        if ((x[1] >= y[0] && x[0] <= y[1]) || (y[0] <= x[1] && y[0] >= x[0]))
+        {
+            tx = max(x[0], y[0]);
+            ty = min(x[1], y[1]);
+            // ins.pb({tx, ty});
+            // cout << tx << " " << ty << endl;
+            // cout << x[0] << " " << x[1] << endl;
+            // cout << y[0] << " " << y[1] << endl;
+        }
+        ++j;
+    }
+    // cout << j << endl;
 
-    // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
-    return 0;
+        return 0;
 }

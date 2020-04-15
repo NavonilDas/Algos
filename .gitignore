@@ -13,4 +13,6 @@ test*.py
 */test*.cpp
 test*.cpp
 problem.cpp
+tempCodeRunnerFile.*
+*/tempCodeRunnerFile.*
 */temp.cpp

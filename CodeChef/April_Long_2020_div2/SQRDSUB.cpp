@@ -37,8 +37,6 @@ using namespace std;
 #define dloop(i, n) for (int i = n, ~i; --i)
 #define debug(x1) cout << #x1 << ": " << x1 << endl;
 #define all(v) (v).begin(), (v).end()
-#define sz(v) ((int)(v.size()))
-
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
 
@@ -48,7 +46,7 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 //     ull res = 1;
 //     a = a%m;
 //     while(p > 0){
-//         if(p&1)
+//         if(res&1)
 //             res = (res*a)%m;
 //         a = (a*a)%m;
 //         p >>=1;
@@ -59,15 +57,65 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // #pragma GCC target("avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
 // fill,copy,lower_bound,upper_bound,max_element,min_element
+const int MAX = 100000;
+ll ar[MAX + 5], pre[MAX + 5];
+ull fortwo(ll *pre,int n)
+{
+    int l = 0, r = 0;
+    ll ans = 0;
+    while (r < n)
+    {
+        int cur = pre[r] - ((l == 0) ? 0 : pre[l - 1]);
+        if (cur >= 2)
+        {
+            ans += n - r;
+            ++l;
+        }
+        else
+        {
+            ++r;
+        }
+    }
+    return ans;
+}
+
 int main()
 {
-    // clock_t tStart = clock();
     FASTIO;
 #ifdef NAVONIL
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
+    int n;
+    ull odd = 0, ocnt = 0;
+    till(t)
+    {
+        cin >> n;
+        odd = 0, ocnt = 0;
+        memset(pre, 0, sizeof(pre));
+        loop(i, n)
+        {
+            cin >> ar[i];
 
-    // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+            int tmp = (ar[i] % 4 == 0) ? 2 : ((ar[i] % 2 == 0) ? 1 : 0);
+            if (i == 0)
+                pre[i] = tmp;
+            else
+                pre[i] = tmp + pre[i - 1];
+
+            if (ar[i] & 1)
+                ++odd;
+            else
+            {
+                ocnt += (odd * (odd + 1)) >> 1;
+                odd = 0;
+            }
+        }
+        // debug(odd);
+        if (odd != 0)
+            ocnt += (odd * (odd + 1)) >> 1;
+        ull two = fortwo(pre,n);
+        cout << (ocnt+two) << endl;
+    }
     return 0;
 }

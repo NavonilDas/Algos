@@ -32,9 +32,9 @@ using namespace std;
     int a;      \
     cin >> a;   \
     while (a--)
-#define loop(i, n) for (int i = 0; i < n; ++i)
-#define from(i, a, b) for (int i = a; i <= b; ++i)
-#define dloop(i, n) for (int i = n, ~i; --i)
+#define loop(i, n) for (int i = 0; i < (int)(n); ++i)
+#define from(i, a, b) for (int i = (a); i <= (b); ++i)
+#define dloop(i, n) for (int i = n; ~i; --i)
 #define debug(x1) cout << #x1 << ": " << x1 << endl;
 #define all(v) (v).begin(), (v).end()
 #define sz(v) ((int)(v.size()))
@@ -61,13 +61,18 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 // fill,copy,lower_bound,upper_bound,max_element,min_element
 int main()
 {
-    // clock_t tStart = clock();
     FASTIO;
 #ifdef NAVONIL
+    clock_t tStart = clock();
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
 
-    // printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+
+
+
+#ifdef NAVONIL
+    printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+#endif
     return 0;
 }

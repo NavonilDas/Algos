@@ -6,16 +6,6 @@ class Solution
 public:
     bool wordBreak(string s, vector<string> &wordDict)
     {
-        /**
-        
-        For Substring j to i
-        the we can break the recursive function as
-        
-        wordBreak(0 to j) and Subtring j to i is in Dictonary and wordBreak(i to end)
-        
-        now we can use dynamic programming to solve the problem
-        
-        **/
         const int n = s.size();
         if (n == 0)
             return true;
